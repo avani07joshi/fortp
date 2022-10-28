@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int n, fl = -99999, sl = -99999;
+    scanf("%d", &n);
+    do
+    {
+        if (n == -1)
+            break;
+        if (n > fl)
+        {
+            sl = fl;
+            fl = n;
+        }
+        else if (n > sl)
+        {
+            sl = n;
+        }
+        scanf("%d", &n);
+    } while (n != -1);
+    printf("first largest:%d\nsecond largest:%d", fl, sl);
+    return 0;
+}
